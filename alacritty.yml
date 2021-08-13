@@ -1,0 +1,15 @@
+font:
+  size: 14
+  normal:
+    family: 'IA Writer Mono S'
+    style: Regular
+  bold:
+    family: 'IA Writer Mono S'
+    style: Fett
+
+window:
+  decorations: 'buttonless'
+  padding:
+    x: 32
+    y: 32
+
