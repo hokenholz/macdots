@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-fugitive'
+  Plug 'jiangmiao/auto-pairs'
   Plug 'aonemd/kuroi.vim'
 call plug#end()
 
@@ -65,4 +66,5 @@ set wrap
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Keybindings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
