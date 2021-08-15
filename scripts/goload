@@ -1,0 +1,69 @@
+#!/bin/bash
+
+function monitor() {
+  if [ "$2" = "true" ];  then
+    inotifywait -q -m -r -e close_write -e moved_to $1 |
+    while read line; do
+      restart
+    done
+  else
+    inotifywait -q -m -r -e close_write -e moved_to --exclude '[^g][^o]$' $1 |
+    while read line; do
+      restart
+    done
+  fi
+}
+
+function restart {
+  if [ "$(pidof $PROCESS_NAME)" ]; then
+    killall -q -w -9 $PROCESS_NAME
+  fi
+  echo ">> Reloading..."
+  eval "go run $ARGS &"
+}
+
+function close {
+  killall -q -w -9 inotifywait
+  exit 0
+}
+
+trap close INT
+echo "== Go-reload"
+
+WATCH_ALL=false
+while getopts ":a" opt; do
+  case $opt in
+    a)
+      WATCH_ALL=true
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 0
+      ;;
+  esac
+done
+
+shift "$((OPTIND - 1))"
+
+FILE_NAME=$(basename $1)
+PROCESS_NAME=${FILE_NAME%%.*}
+
+ARGS=$@
+
+echo ">> Watching directories, CTRL+C to stop"
+eval "go run $ARGS &"
+
+OIFS="$IFS"
+IFS=':'
+for path in $GOPATH
+do
+  monitor $path/src $WATCH_ALL &
+done
+IFS="$OIFS"
+
+if [[ $PWD != "$GOPATH/"* ]]
+then
+  monitor $PWD $WATCH_ALL
+fi
+
+wait
