@@ -2,11 +2,17 @@
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
+  " Language support
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  
+  " Functionality
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-fugitive'
   Plug 'jiangmiao/auto-pairs'
+
+  " Colors
   Plug 'aonemd/kuroi.vim'
 call plug#end()
 
@@ -35,6 +41,7 @@ set number relativenumber
 set nu rnu
 
 autocmd Filetype go setlocal ts=8 sw=8 expandtab
+autocmd BufNewFile,BufRead *.nim, set filetype=nim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and Fonts
