@@ -1,0 +1,42 @@
+{
+    // workbench settings
+    "workbench.statusBar.visible": false,
+    "workbench.editor.showTabs": false,
+    "workbench.activityBar.visible": false,
+    "workbench.sideBar.location": "right",
+    "workbench.tips.enabled": false,
+    "workbench.tree.indent": 20,
+    "workbench.tree.renderIndentGuides": "none",
+    "breadcrumbs.enabled": false,
+    "breadcrumbs.filePath": "off",
+
+    // editor settings
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.scale": 2,
+    
+    // window settings
+    "window.titleBarStyle": "native",
+
+    // theme settings
+    "workbench.colorTheme": "Min Dark",
+    "editor.fontFamily": "SFMono Nerd Font",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 22,
+
+    // customize ui
+    "customizeUI.titleBar": "frameless",
+
+    // language settings
+    "[go]": {
+        "editor.tabSize": 8,
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.suggest.snippetsPreventQuickSuggestions": false
+    }
+}
