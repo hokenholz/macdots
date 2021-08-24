@@ -1,4 +1,8 @@
-# fast focus desktop
+# full focus
+alt + shift - d : yabai -m window --toggle zoom-parent
+alt + shift - f : yabai -m window --toggle zoom-fullscreen
+
+# focus spaces
 alt + shift - 1 : yabai -m space --focus 1
 alt + shift - 2 : yabai -m space --focus 2
 alt + shift - 3 : yabai -m space --focus 3
@@ -8,3 +12,24 @@ alt + shift - 6 : yabai -m space --focus 6
 alt + shift - 7 : yabai -m space --focus 7
 alt + shift - 8 : yabai -m space --focus 8
 alt + shift - 9 : yabai -m space --focus 9
+
+# move to desktop
+cmd + shift - 1 : yabai -m window --space 1; yabai -m space --focus 1
+cmd + shift - 2 : yabai -m window --space 2; yabai -m space --focus 2
+cmd + shift - 3 : yabai -m window --space 3; yabai -m space --focus 3
+cmd + shift - 4 : yabai -m window --space 4; yabai -m space --focus 4
+cmd + shift - 5 : yabai -m window --space 5; yabai -m space --focus 5
+cmd + shift - 6 : yabai -m window --space 6; yabai -m space --focus 6
+cmd + shift - 7 : yabai -m window --space 7; yabai -m space --focus 7
+cmd + shift - 8 : yabai -m window --space 8; yabai -m space --focus 8
+cmd + shift - 9 : yabai -m window --space 9; yabai -m space --focus 9
+
+# modify space layout
+alt + shift - t : yabai -m window --toggle float;\
+                  yabai -m window --grid 4:4:1:1:2:2
+
+# modify window tree
+alt + shift - b : yabai -m space --balance
+alt + shift - x : yabai -m space --mirror x-axis
+alt + shift - y : yabai -m space --mirror y-axis
+alt + shift - r : yabai -m space --rotate 90
