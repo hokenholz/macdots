@@ -11,11 +11,10 @@
     "breadcrumbs.filePath": "off",
 
     // editor settings
+    "editor.renderIndentGuides": false,
     "editor.scrollbar.horizontal": "hidden",
     "editor.scrollbar.vertical": "hidden",
-    "editor.minimap.enabled": true,
-    "editor.minimap.renderCharacters": false,
-    "editor.minimap.scale": 2,
+    "editor.minimap.enabled": false,
     
     // window settings
     "window.titleBarStyle": "native",
