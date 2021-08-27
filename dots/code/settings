@@ -18,9 +18,7 @@
     
     // window settings
     "window.titleBarStyle": "native",
-
-    // theme settings
-    "workbench.colorTheme": "Min Dark",
+    "workbench.colorTheme": "Tokyo Night",
     "editor.fontFamily": "SFMono Nerd Font",
     "editor.fontSize": 14,
     "editor.lineHeight": 22,
@@ -28,7 +26,12 @@
     // customize ui
     "customizeUI.titleBar": "frameless",
 
-    // language settings
+    // custom stylesheets
+    // "customizeUI.stylesheet": {
+    //     ".monaco-workbench .part.editor>.content .editor-group-container>.title": "display: none !important"
+    // },
+
+    // go settings
     "[go]": {
         "editor.tabSize": 8,
         "editor.insertSpaces": false,
