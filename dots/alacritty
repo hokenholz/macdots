@@ -14,19 +14,14 @@ key_bindings:
 font:
   size: 14
   normal:
-    family: 'IA Writer Mono S'
+    family: 'SFMono Nerd Font'
     style: Regular
   bold:
-    family: 'IA Writer Mono S'
-    style: Fett
+    family: 'SFMono Nerd Font'
+    style: Bold
 
 window:
   decorations: 'buttonless'
   padding:
     x: 32
     y: 32
-
-colors:
-  primary:
-    background: '0x1c1c1c'
-    foreground: '0xb9b9b9'
