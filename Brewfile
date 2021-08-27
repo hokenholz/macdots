@@ -17,8 +17,6 @@ cask 'discord'
 # languages
 brew 'go'
 brew 'fnm'
-brew 'rbenv'
-brew 'ruby-build'
 brew 'elixir'
 brew 'rebar3'
 brew 'gleam'
