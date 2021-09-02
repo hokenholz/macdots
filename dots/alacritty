@@ -25,3 +25,7 @@ window:
   padding:
     x: 32
     y: 32
+
+colors:
+  primary:
+    background: '0x1c1c1c'

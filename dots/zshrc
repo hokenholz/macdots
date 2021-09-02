@@ -1,7 +1,29 @@
-# golang
+export TERM=xterm-256color
+
+##############################################
+# Lanuages
+##############################################
+
 export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
-# functions
+eval "$(fnm env)"
+
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
+
+##############################################
+# Prompt
+##############################################
+
+eval "$(starship init zsh)"
+
+##############################################
+# Functions
+##############################################
+
 e() { exa -la }
+f() { fff "$@" cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")" }
+

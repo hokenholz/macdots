@@ -1,0 +1,35 @@
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+
+set -g base-index 1
+set -g pane-base-index 1
+
+bind | split-window -h -c "#{pane_current_path}"
+bind - split-window -v -c "#{pane_current_path}"
+
+unbind '"'
+unbind %
+
+bind c new-window -c "#{pane_current_path}"
+
+bind r source-file ~/.tmux.conf
+
+unbind p
+bind p previous-window
+
+set -sg escape-time 1
+set -g allow-rename off
+set -g mouse on
+
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+set-window-option -g mode-keys vi
+set -g default-terminal "screen-256color"
+
+bind u capture-pane \;\
+    save-buffer /tmp/tmux-buffer \;\
+    split-window -l 1- "urlview /tmp/tmux-buffer"
