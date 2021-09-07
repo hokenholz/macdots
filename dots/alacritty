@@ -14,10 +14,10 @@ key_bindings:
 font:
   size: 14
   normal:
-    family: 'SFMono Nerd Font'
+    family: 'MonoLisa'
     style: Regular
   bold:
-    family: 'SFMono Nerd Font'
+    family: 'MonoLisa'
     style: Bold
 
 window:
