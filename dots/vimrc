@@ -3,19 +3,16 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
   " Languages
-  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'fatih/vim-go'
 
   " Functionality
-  Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
   Plug 'jiangmiao/auto-pairs'
 
   " Interface
   Plug 'dylanaraps/fff.vim'
-  Plug 'ap/vim-buftabline'
-
-  " Colorschemes
+  Plug 'itchyny/lightline.vim'
   Plug 'aonemd/kuroi.vim'
 call plug#end()
 
@@ -44,16 +41,16 @@ set number relativenumber
 set nu rnu
 set hidden
 set noshowmode
+set laststatus=2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-syntax enable 
+syntax on
 set ffs=unix,dos,mac
 set encoding=utf8
-set termguicolors
-set t_Co=256
 set background=dark
+set t_Co=256
 
 colorscheme kuroi
 
@@ -73,7 +70,7 @@ set wrap
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:fff#split = "30vnew"
+let g:fff#split = "60vnew"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Keybindings
@@ -81,4 +78,11 @@ let g:fff#split = "30vnew"
 nnoremap f :F<CR>
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
+
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>r  <Plug>(go-ru
 
