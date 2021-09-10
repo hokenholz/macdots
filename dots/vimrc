@@ -4,15 +4,13 @@
 call plug#begin('~/.vim/plugged')
   " Languages
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'fatih/vim-go'
+
+  " Colors
+  Plug 'aoenmd/kuroi.vim'
 
   " Functionality
   Plug 'tpope/vim-commentary'
   Plug 'jiangmiao/auto-pairs'
-
-  " Interface
-  Plug 'dylanaraps/fff.vim'
-  Plug 'aonemd/kuroi.vim'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -39,8 +37,6 @@ set tm=500
 set number relativenumber
 set nu rnu
 set hidden
-set noshowmode
-set laststatus=2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and Fonts
@@ -48,8 +44,9 @@ set laststatus=2
 syntax on
 set ffs=unix,dos,mac
 set encoding=utf8
-set background=dark
 set t_Co=256
+set background=dark
+set termguicolors
 
 colorscheme kuroi
 
@@ -69,12 +66,10 @@ set wrap
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:fff#split = "60vnew"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Keybindings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap f :F<CR>
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 
