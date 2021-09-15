@@ -2,5 +2,5 @@ font_family             MonoLisa
 font_size               14
 adjust_line_height      4
 background              #1c1c1c
-hide_window_decorations yes
+hide_window_decorations titlebar-only
 window_padding_width    40

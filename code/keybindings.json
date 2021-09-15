@@ -1,0 +1,149 @@
+[
+    // panels
+    {
+      "key": "cmd+k cmd+e",
+      "command": "workbench.view.explorer"
+    },
+    {
+      "key": "cmd+k cmd+g",
+      "command": "workbench.view.scm"
+    },
+    {
+      "key": "cmd+k cmd+d",
+      "command": "workbench.view.debug"
+    },
+    {
+      "key": "cmd+k cmd+x",
+      "command": "workbench.extensions.action.showInstalledExtensions"
+    },
+    {
+      "key": "cmd+b",
+      "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+      "key": "cmd+e",
+      "command": "workbench.action.focusActiveEditorGroup"
+    },
+    {
+      "key": "cmd+t",
+      "command": "workbench.action.terminal.toggleTerminal"
+    },
+  
+    // folding
+    {
+      "key": "shift+cmd+[",
+      "command": "editor.fold",
+      "when": "editorFocus"
+    },
+    {
+      "key": "shift+cmd+]",
+      "command": "editor.unfold",
+      "when": "editorFocus"
+    },
+  
+    // line manipulation
+    {
+      "key": "cmd+l",
+      "command": "editor.action.copyLinesDownAction",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "cmd+j",
+      "command": "editor.action.joinLines",
+      "when": "editorTextFocus"
+    },
+  
+    // file explorer
+    {
+      "key": "cmd+d",
+      "command": "duplicate.execute",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+    },
+    {
+      "key": "cmd+n",
+      "command": "explorer.newFile",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+      "key": "shift+cmd+n",
+      "command": "explorer.newFolder",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+  
+    // multi cursor
+    {
+      "key": "cmd+backspace",
+      "command": "editor.action.moveSelectionToPreviousFindMatch",
+      "when": "editorFocus && editorHasMultipleSelections"
+    },
+    {
+      "key": "cmd+k cmd+d",
+      "command": "editor.action.moveSelectionToNextFindMatch",
+      "when": "editorFocus && editorHasMultipleSelections"
+    },
+    {
+      "key": "cmd+right",
+      "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+      "when": "editorFocus && editorHasSelection"
+    },
+  
+    // split panels
+    {
+      "key": "ctrl+w",
+      "command": "workbench.action.joinAllGroups",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+n",
+      "command": "workbench.action.splitEditor",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+l",
+      "command": "workbench.action.navigateRight",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+h",
+      "command": "workbench.action.navigateLeft",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+[BracketRight]",
+      "command": "workbench.action.increaseViewSize",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+-",
+      "command": "workbench.action.decreaseViewSize",
+      "when": "editorFocus"
+    },
+  
+    // terminal
+    {
+      "key": "ctrl+n",
+      "command": "workbench.action.terminal.split",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+l",
+      "command": "workbench.action.terminal.focusNextPane",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+h",
+      "command": "workbench.action.terminal.focusPreviousPane",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+w",
+      "command": "workbench.action.terminal.kill",
+      "when": "terminalFocus"
+    },
+  
+    // dev tools
+    {
+      "key": "alt+cmd+i",
+      "command": "workbench.action.toggleDevTools"
+    }
+  ]
