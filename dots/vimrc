@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
@@ -6,9 +6,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
   " Colors
-  Plug 'aoenmd/kuroi.vim'
+  Plug 'aonemd/kuroi.vim'
 
   " Functionality
+  Plug 'preservim/nerdtree'
   Plug 'tpope/vim-commentary'
   Plug 'jiangmiao/auto-pairs'
 call plug#end()
@@ -66,12 +67,21 @@ set wrap
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:NERDTreeWinPos = "right"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Keybindings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
